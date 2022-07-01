@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} Id card {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+           <div style="margin: 180px;margin-top: 140px;">
+            <center><h1>Id Card</h1></center>
+           <form action="" method="post">
+            {% csrf_token %}
+                <div class="inputs" style="margin-bottom:20px;">
+                    <label style="margin-bottom:20px;">Enrollment No.</label>
+                    <input type="text" name="enrollment_no" id="" placeholder="Search Enrollment No.">
+                </div>
+                <div>
+                    <input type="submit" class="btn-contact" value="Submit" style="background-color: #bd081d; color: white; cursor: pointer;padding: 10px;">
+                </div>
+                <br><br>
+            </form>
+            {% if idcard %}
+                <h3>Alumni Details</h3>
+                <div>
+                    <a href="{% url 'index:idcard-pdf-view' idcard.enrollment_no %}" target="_blank"><input type="submit" class="btn-contact" value="Download Id Card" style="background-color: #bd081d; color: white; cursor: pointer;width:30%;padding: 10px;">
+                  
+                    </div>
+
+                 <center style="margin: 20px;"> <div id="block-main-logo" class="site-header__logo"><a href="index.html"><span class="show-for-sr">Return
+                    to St. John's University homepage</span><img class="medium-up"
+                    src="{% static 'logos/logo-header-desktop.svg' %}" alt="St. John's University Logo"><img
+                    class="small-only" src="{% static 'themes/sju_theme/assets/logos/logo-header-mobile.svg' %}"
+                    alt="St. John's University Logo"></a></div></center>  
+       <div style="display:  flex;">
+        <img src="{{idcard.image.url}}" alt="" width="290" height="250">
+        <div style="margin:15px;">
+            <p> <b> Course :</b>{{idcard.title}} </p> 
+            <p> <b> Name :</b> {{idcard.name}}</p> 
+            <p> <b> Enrollment No:</b> {{idcard.enrollment_no}}</p> 
+            <p> <b> Father's Name : </b> {{idcard.fathers_name}} </p> 
+            <p> <b> DOB : </b> {{idcard.dob}}</p> 
+            <p> <b> Address :</b> {{idcard.address}}</p> 
+            <p> <b> Issuing Year :</b> {{idcard.issuing_year}}</p> 
+            
+            <p> <b> Validity Year :</b>  {{idcard.validity_year}}</p> 
+        </div>
+ 
+       </div>
+            
+        </div>
+        {% endif %}
+{% endblock body %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{myvar.enrollment_no}}</title>
+    <style>
+        embed{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        body{
+            padding: 0 1rem;
+            margin-top: 1em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .title{
+            background-color: #909090;
+            color: #fff;
+            padding: 1em;
+            border-radius: 60px;
+        }
+        .photo{
+            border: 3px solid #000;
+            width: 300px;
+        }   
+
+        .details_container{ 
+            margin-left: 1rem;
+            position: absolute;
+            left: 100px;
+            top: 200px;
+        }
+        p{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="" alt="" width="200" height="150"/>
+    <h1 class="title">{{myvar.title}}</h1>
+    <div class="container">
+        <img src="{{myvar.image.path}}" alt="" class="photo" >
+            <div class="details_container">
+                <h2 class="date">Date- {{myvar.date}}</h2>
+                <h2 class="time">Time- {{myvar.time}}</h2>
+                <h2 class="reg_num">Registration Number- {{myvar.reg_no}}</h2>
+                <h2 class="name">Name- {{myvar.name}}</h2>
+                <h2 class="gate_paper">GATE Paper- {{myvar.paper}}</h2>
+                <h2 class="examcenter">Exam Center({{myvar.exam_centre}})</h2>
+            </div>
+       
+    </div>
+    <hr>
+    <h3 style="text-align: center;"><strong>Instructions to the candidate</strong></h3>
+    <p>{{myvar.instruction}}</p>
+        <hr>
+</body>
+</html>

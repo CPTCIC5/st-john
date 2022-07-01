@@ -32,4 +32,4 @@ def register(request):
 def logout(request):
     auth_logout(request)
     messages.success(request,'Logout Successful')
-    return HttpResponseRedirect(reverse('home:index'))
+    return HttpResponseRedirect(reverse('index:index'))

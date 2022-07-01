@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'stjohn',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -82,9 +83,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 """
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -129,8 +128,8 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_REDIRECT_URL=''
-LOGIN_URL=''
+LOGIN_REDIRECT_URL='index:index'
+LOGIN_URL='users:login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -142,6 +141,13 @@ STATICFILES_DIRS= [
 
 MEDIA_URL='/Data/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'Data')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER ='ubunga255@gmail.com'
+EMAIL_HOST_PASSWORD ='ABcd11//'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
