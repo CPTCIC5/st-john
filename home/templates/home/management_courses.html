@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %} Courses {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<div>
+    <center>
+        <h1>Management Courses</h1>
+        {% for course in course_desc %}
+        <div>
+            
+            <button style="width: 80%;padding:20px;margin:10px;border:none;border-radius:6px;background-color:#bd081d;color: white;">{{course.title}}</button>
+            
+        </div>
+   
+        <table style="width: 50%;border: 1;">
+            <tr>
+                <th colspan="2">{{course.title}}</th>
+            </tr>
+            <tr>
+                <td >Name</td>
+                <td >{{course.name}}</td>
+            </tr>
+
+            <tr>
+                <td >Code</td>
+                <td >{{course.code}}</td>
+            </tr>
+
+            <tr>
+                <td >Pre-requites</td>
+                <td >{{course.pre_requisite}}</td>
+            </tr>
+
+            <tr>
+                <td >Duration</td>
+                <td >{{course.duration}}</td>
+            </tr>
+
+            <tr>
+                <td >Fee</td>
+                <td >{{course.fee}}</td>
+            </tr>
+
+            <tr>
+                <td >Breif Description</td>
+                <td >{{course.breif_desc}}</td>
+            </tr>
+        </table>
+        {% endfor %}
+    </center>
+   
+</div>
+
+{% endblock body %}

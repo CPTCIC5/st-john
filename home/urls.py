@@ -19,5 +19,10 @@ urlpatterns = [
     path('quiz/<str:title>/',views.quiz,name='quiz'),
     path('result-quiz/',views.result_quiz,name='result_quiz'),
 
-    path('courses/',views.courses,name='courses')
+    path('courses/',views.courses,name='courses'),
+    path('health_science_courses/', views.health_science_courses,name='health_science_courses'),
+    path('engineering_courses/', views.engineering_courses,name='engineering_courses'),
+    path('management_courses/', views.management_courses,name='management_courses'),
+    path('certified_courses/', views.certified_courses,name='certified_courses'),
+
 ]

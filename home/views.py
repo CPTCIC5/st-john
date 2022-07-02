@@ -236,19 +236,19 @@ def health_science_courses(request):
     course_desc = Course_desc.objects.filter(branch="Health Science Courses")
     context = {'course_desc':course_desc}
 
-    return render(request, 'student/health_science_courses.html',context)
+    return render(request, 'home/health_science_courses.html',context)
 
 def engineering_courses(request):
     course_desc = Course_desc.objects.filter(branch="Engineering Courses")
     context = {'course_desc':course_desc}
-    return render(request, 'student/engineering_courses.html',context)
+    return render(request, 'home/engineering_courses.html',context)
 
 def management_courses(request):
     course_desc = Course_desc.objects.filter(branch="Management Courses")
     context = {'course_desc':course_desc}
-    return render(request, 'student/management_courses.html',context)
+    return render(request, 'home/management_courses.html',context)
 
 def certified_courses(request):
     course_desc = Course_desc.objects.filter(branch="Certified Courses")
     context = {'course_desc':course_desc}
-    return render(request, 'student/certified_courses.html',context)
+    return render(request, 'home/certified_courses.html',context)
