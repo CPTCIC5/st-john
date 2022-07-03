@@ -24,7 +24,7 @@ with open(os.path.join(BASE_DIR,'secret_key.txt')) as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['stjohnedu.in','www.stjohnedu.in','localhost','127.0.0.1']
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'stjohn.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -135,17 +136,14 @@ LOGIN_URL='users:login'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS= [
-    os.path.join(BASE_DIR,'static')
-]
 
-
-#STATIC_ROOT=os.path.join(BASE_DIR,'/static/')
-
-MEDIA_URL='/Data/'
-MEDIA_ROOT= os.path.join(BASE_DIR,'Data')
+MEDIA_URL = '/Data/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'Data')
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST='smtp.gmail.com'
