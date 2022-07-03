@@ -16,8 +16,25 @@
       form.antibot * :not(.antibot-message) {
         display: none !important;
       }
+      
     </style>
   </noscript>
+<style>
+  .h{
+    opacity: 1;
+  }
+  .menu-item--expanded.hide{
+    display: none;
+  }
+  @media screen and (max-width:1024px){
+    .h{
+      opacity:0;
+    }
+    .menu-item--expanded.hide{
+      display: block;
+    }
+  }
+  </style>
   <link rel="canonical" href="/" />
   <link rel="shortlink" href="/" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -66,7 +83,9 @@
       }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5STJNB');</script>
+    })(window, document, 'script', 'dataLayer', 'GTM-5STJNB');
+    
+    </script>
   <!-- End Google Tag Manager -->
   
  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
@@ -83,34 +102,34 @@
       <header data-directional-scroll-reveal="true" data-sticky-container class="site-header">
         <div data-sticky-item class="sticky-header-item">
           <div id="back-to-sju" class="hide-on-print">
-            <a class="btn" href="{% url 'index:index' %}">Keeping St. John's Healthy</a>
+            <a class="btn" href="{% url 'index:index' %}">Keeping St. John Healthy</a>
           </div>
           <div class="site-header__main">
             <div class="row">
               <nav id="block-menu-block-header-cta" class="site-header__utility" role="navigation"
                 aria-label="utilities navigation">
                 <ul class="menu">
-                  <li class="li--level-one"><a
+                  <li class="li--level-one h"><a
                       href="{% url 'index:apply' %}"
                       rel="noopener">Apply</a></li>
                     
-                  <li class="li--level-one"><a
+                  <li class="li--level-one h"><a
                       href="{% url 'index:courses' %}"
                       rel="noopener">Programs</a></li>
-                      <li class="li--level-one"><a
+                      <li class="li--level-one h"><a
                       href="{% url 'index:idcard' %}"
                       rel="noopener">Id card</a></li>
                 </ul>
               </nav>
               <div id="block-main-logo" class="site-header__logo"><a href="/"><span class="show-for-sr">Return
-                    to St. John's University homepage</span><img class="medium-up"
-                    src="{% static 'logos/logo-header-desktop.svg' %}" alt="St. John's University Logo"><img
-                    class="small-only" src="{% static 'themes/sju_theme/assets/logos/logo-header-mobile.svg' %}"
-                    alt="St. John's University Logo"></a></div>
+                    to St. John University homepage</span><img class="medium-up"
+                    src="{% static 'logos/stjohn.png' %}" alt="St. John's University Logo"><center><img
+                    class="small-only" src="{% static 'logos/stjohn.png' %}"
+                    alt="St. John's University Logo"></center></a></div>
                     <div class="site-header__right-col site-header__rigt-col--secondary--has-search">
 
 
-                <div class="site-header__search">
+                <div class="site-header__search h">
                   <a href="{% url 'index:admitcard' %}" class="btn--site__header btn--search" type="button">Admit Card</a>
              
                 </div>
@@ -118,7 +137,7 @@
                 <nav id="block-menu-block-secondary-header-cta" class="site-header__utility" role="navigation"
                   aria-label="secondary utilities navigation">
                   <ul class="menu">
-                    <li class="li--level-one"><a href="{% url 'index:result' %}"
+                    <li class="li--level-one h"><a href="{% url 'index:result' %}"
                         data-drupal-link-system-path="node/1696">Result</a></li>
                   </ul>
                 </nav>
@@ -129,6 +148,21 @@
                     
                   <nav id="main-menu" class="navigation" role="navigation" aria-label="main navigation">
                     <ul class="menu">
+                      <li class="menu-item--expanded li--level-one hide"><a href="{% url 'index:apply' %}"
+                          data-drupal-link-system-path="node/1671">Apply</a>
+                      </li>
+                      <li class="menu-item--expanded li--level-one hide"><a href="{% url 'index:courses' %}"
+                          data-drupal-link-system-path="node/1671">Programs</a>
+                      </li>
+                      <li class="menu-item--expanded li--level-one hide"><a href="{% url 'index:idcard' %}"
+                          data-drupal-link-system-path="node/1671">Id Card</a>
+                      </li>
+                      <li class="menu-item--expanded li--level-one hide"><a href="{% url 'index:admitcard' %}"
+                          data-drupal-link-system-path="node/1671">Admit Card</a>
+                      </li>
+                      <li class="menu-item--expanded li--level-one hide"><a href="{% url 'index:result' %}"
+                          data-drupal-link-system-path="node/1671">Result</a>
+                      </li>
                       {% if user.is_authenticated %}
                       <li class="menu-item--expanded li--level-one"><a href="{% url 'users:logout' %}"
                         data-drupal-link-system-path="node/1671">Logout | {{user.username}}</a>

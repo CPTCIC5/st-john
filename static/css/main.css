@@ -1,9 +1,9 @@
 body.compensate-for-scrollbar {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .fancybox-active {
-    height: auto
+    height: auto;
 }
 
 .fancybox-is-hidden {
@@ -32,6 +32,7 @@ body.compensate-for-scrollbar {
 .fancybox-container * {
     box-sizing: border-box
 }
+
 
 .fancybox-bg,
 .fancybox-inner,
@@ -17498,8 +17499,8 @@ screen and (min-width:59.375rem) {
     .page--utility.page--user .login-container div[id="okta-login"]::after {
         content: none;
     }
+    
 }
-
 .page--utility.page--user .login-container div[id="okta-login"] label {
     margin-bottom: 1.25rem;
 }
@@ -17554,6 +17555,7 @@ screen and (min-width:59.375rem) {
 }
 
 @media screen and (min-width:64em) {
+ 
     .section--featured-news:not(.section--featured-news--large) {
         padding-bottom: 3.75rem;
     }

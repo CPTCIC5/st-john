@@ -87,13 +87,14 @@ DATABASES = {
 }
 """
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'st-john',
+        'NAME': 'st_john',
         'USER': 'postgres',
         'PASSWORD': 'Iamreal123',
-        'HOST': 'localhost',
+        'HOST': 'database-2.cb2mm6hbfw9b.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
