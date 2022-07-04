@@ -33,14 +33,14 @@
                 {% if admitcard %}
                 <h3>Alumni Details</h3>
                 <div>
-                    <a href="{% url 'index:admit-pdf-view' admitcard.enrollment_no %}"><input type="submit" class="btn-contact" value="Download Admit Card" style="background-color: darkblue; color: white; cursor: pointer;width:30%;padding: 10px;">
+                    <a href="{% url 'index:admit-pdf-view' admitcard.enrollment_no %}" target="_blank"><input type="submit" class="btn-contact" value="Download Admit Card"  style="background-color: darkblue; color: white; cursor: pointer;width:30%;padding: 10px;">
                     </a>
                     </div>
 
                  <center style="margin: 20px;"> <div id="block-main-logo" class="site-header__logo"><a href="index.html"><span class="show-for-sr">Return
                     to St. John's University homepage</span><img class="medium-up"
-                    src="{% static 'logos/logo-header-desktop.svg' %}" alt="St. John's University Logo"><img
-                    class="small-only" src="{% static 'themes/sju_theme/assets/logos/logo-header-mobile.svg' %}"
+                    src="{% static 'logos/stjohn.png' %}" alt="St. John's University Logo"><img
+                    class="small-only" src="{% static 'stjohn.png' %}"
                     alt="St. John's University Logo"></a></div></center>  
        <div style="display:  flex;">
         <img src="{{admitcard.image.url}}" alt="" width="290" height="250">
