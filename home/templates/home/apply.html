@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %} Apply {% endblock title %}
-
+{% block css %} <style>
+    .mo-res{
+        margin: 50px;
+    }
+    .btn-d{
+        margin-bottom: 20px;margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        .mo-res{
+            margin-top: 240px;
+        }
+    }
+</style> {% endblock css %}
 {% block body %}
 
 {% load static %}
 
-        <div style="margin: 180px;">
+        <div class="mo-res" >
             <center><h1>Apply</h1></center>
         <form method="POST">
             {% csrf_token %}
@@ -46,8 +58,8 @@
             <textarea name="query" id="" cols="30" rows="10"></textarea>
             </div>
 
-            <div  style="margin-bottom: 20px;margin-top: 10px;">
-                <input type="submit" class="btn-contact" value="Apply" style="background-color: #bd081d; color: white; cursor: pointer;padding: 10px;">
+            <div class="btn-d"  style="">
+                <input type="submit" class="btn-contact" value="Apply" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
             </div>
         </form>
         </div>

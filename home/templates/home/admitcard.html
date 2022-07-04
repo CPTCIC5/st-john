@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %} Admit Card {% endblock title %}
-
+{% block css %} <style>
+    .mo-res{
+        margin: 50px;
+    }
+    .btn-d{
+        margin-bottom: 20px;margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        .mo-res{
+            margin-top: 240px;
+        }
+    }
+</style> {% endblock css %}
 {% block body %}
 
 {% load static %}
 
-           <div style="margin: 180px;margin-top: 140px;">
+           <div class="mo-res">
             <center><h1>Admit Card</h1></center>
            <form action="" method="post">
             {% csrf_token %}
@@ -14,14 +26,14 @@
                     <input type="text" name="enrollment_no" id="" placeholder="Search Enrollment No.">
                 </div>
                 <div>
-                    <input type="submit" class="btn-contact" value="Submit" style="background-color: #bd081d; color: white; cursor: pointer;padding: 10px;">
+                    <input type="submit" class="btn-contact" value="Submit" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
                 </div>
                 <br><br>
             </form>
                 {% if admitcard %}
                 <h3>Alumni Details</h3>
                 <div>
-                    <a href="{% url 'index:admit-pdf-view' admitcard.enrollment_no %}"><input type="submit" class="btn-contact" value="Download Admit Card" style="background-color: #bd081d; color: white; cursor: pointer;width:30%;padding: 10px;">
+                    <a href="{% url 'index:admit-pdf-view' admitcard.enrollment_no %}"><input type="submit" class="btn-contact" value="Download Admit Card" style="background-color: darkblue; color: white; cursor: pointer;width:30%;padding: 10px;">
                     </a>
                     </div>
 

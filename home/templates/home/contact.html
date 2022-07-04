@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %} Contact {% endblock title %}
-
+{% block css %} <style>
+    .mo-res{
+        margin: 50px;
+    }
+    .btn-d{
+        margin-bottom: 20px;margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        .mo-res{
+            margin-top: 240px;
+        }
+    }
+</style> {% endblock css %}
 {% block body %}
 
 {% load static %}
 
-           <div style="margin: 180px;margin-top: 140px;">
+           <div class="mo-res" >
             <center><h1>Contact Us</h1></center>
             <form method="POST">
               {% csrf_token %}
@@ -30,7 +42,7 @@
                     <textarea rows="15" name="message" cols="20" required style="margin-bottom: 20px;"></textarea>
                 </div>
                 <div>
-                <input type="submit" class="btn-contact" value="Submit" style="background-color: #bd081d; color: white; cursor: pointer;padding: 10px;">
+                <input type="submit" class="btn-contact" value="Submit" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
                 </div>
             </form>
         </div>

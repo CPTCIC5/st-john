@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% block title %} St.John University {% endblock title %}
-
+{% block css %}
+<style>
+  @media screen and (max-width:1024px) {
+    .mo-card article{
+      margin-top: 90px;
+}
+  }
+ 
+</style>
+{% endblock css %}
 {% block body %}
 
 {% load static %}
@@ -12,18 +21,18 @@
                 <figure>
                   <picture>
                     <source
-                      srcset="/sites/default/files/styles/1600x900/public/2021-06/e_m_fall_2018_615_1600x900.jpg.webp?itok=eENxZ00i"
+                      srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
                       media="(min-width: 1024px)" type="image/webp" />
                     <source
-                      srcset="/sites/default/files/styles/1024w/public/2021-06/e_m_fall_2018_615_1600x900.jpg.webp?itok=m6Ym1M1i"
+                      srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
                       media="(min-width: 640px)" type="image/webp" />
                     <source
-                      srcset="/sites/default/files/styles/1600x900/public/2021-06/e_m_fall_2018_615_1600x900.jpg?itok=eENxZ00i"
+                      srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
                       media="(min-width: 1024px)" type="image/jpeg" />
                     <source
-                      srcset="/sites/default/files/styles/1024w/public/2021-06/e_m_fall_2018_615_1600x900.jpg?itok=m6Ym1M1i"
+                      srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
                       media="(min-width: 640px)" type="image/jpeg" /><img
-                      src="sites/default/files/styles/640w/public/2021-06/e_m_fall_2018_615_1600x90051c1.jpg?itok=ArJirQlh"
+                      src="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
                       alt="Students standing in front of library " typeof="foaf:Image" />
                   </picture>
                 </figure>
@@ -65,56 +74,8 @@
           </div>
           <div class=" ">
             <div id="main-content" class="content">
-              <section class="section--intro-block">
-                <article class="card card--large card--notched card--intro-block">
-                  <div class="card__content">
-                    <div class="card__content__inner">
-                      <div class="card__text">
-                        <div class="row">
-                          <div class="small-12 medium-6 columns">
-                            <h2> Take the Next Step
-                            </h2>
-                            <p>Take the next step in your journey and find out how a degree from St. John University
-                              will transform your life.</p><span class="card--intro-block__btn"><a
-                                href="admission/apply0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Apply
-                              </a></span><span class="card--intro-block__btn"><a
-                                href="admission/tuition-and-financial-aid/payment-options/enrollment-and-housing-deposit0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Deposit
-                              </a></span><span class="card--intro-block__btn"><a
-                                href="admission/connect-us/explore-st-johns-today0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Visit
-                              </a></span>
-                          </div>
-                          <div class="small-12 medium-6 columns">
-                            <h2> Admission and Aid
-                            </h2>
-                            <p>St. John offers more than 100 majors at our seven campuses and locations. Learn more
-                              about admission requirements and scholarship opportunities.</p><span
-                              class="card--intro-block__btn"><a
-                                href="admission/undergraduate-admission0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Undergraduate Students
-                              </a></span><span class="card--intro-block__btn"><a
-                                href="admission/transfer-st-johns0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Transfer Students
-                              </a></span><span class="card--intro-block__btn"><a
-                                href="admission/graduate-admission0aae.html?utm_source=Intro%20Block&amp;utm_medium=Website&amp;utm_campaign=June%202021%20Changes"
-                                class="btn">
-                                Graduate Students
-                              </a></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </section>
-              <section>
+                <hr><center> <h2> About St. John University</h2></center>  <hr>
+              <section class="mo-card">
                 <div class="topic-driver-featured-img topic-driver-featured-img--home">
                   <div class="media media--blazy media--bundle--image media--image is-b-loading">
                     <picture>
@@ -138,8 +99,7 @@
                   </div>
                   <div class="img-overlay anim-item anim-item--active" aria-hidden="true"></div>
                   <div class="padded-row row">
-                    <h2> About St. John University
-                    </h2>
+                   
                     <p>At St. John University, you can have it all: a Catholic and Vincentian education that broadens your mind, the opportunity to serve your community, the resources and excitement of New York City
                       and our global locations, and the support and network you need for success.It is an Autonomous body that is imparting "ONLINE EDUCATION" to empower people irrespective of Age, Cast, Creed and Religion for those who have lost the opportunity at the right age due to Poverty, Social Compulsion, and family conditions.</p>
                   </div>
@@ -777,102 +737,7 @@
                   </div>
                 </div>
               </section>
-              <section
-                class="section--global-spacing--small section--block-list sequence-anim-parent paragraph paragraph--type--featured-events-teamup paragraph--view-mode--default">
-                <div class="row outer-row">
-                  <div class="heading-column">
-                    <h2> Events
-                    </h2>
-                  </div>
-                  <div class="row block-list-column small-12 mobile-offset-slider">
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <article class="block-list-item event block-list-item--event">
-                        <div class="date-block date-block--horizontal"><span class="month">Jun</span><span
-                            class="day">23</span><span class="year">2022</span></div>
-                        <div class="block-list__content">
-                          <h3><a href="https://teamup.com/ksqjxw886jje5f3mpm/events/1179682429" target="_blank">APD
-                              Recent Graduate Series: Budgeting and Money Management 101</a></h3><span class="date"> Jun
-                            23, 2022, 11 a.m.
-                            – 11:45 a.m.
-
-                          </span>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <article class="block-list-item event block-list-item--event">
-                        <div class="date-block date-block--horizontal"><span class="month">Jun</span><span
-                            class="day">29</span><span class="year">2022</span></div>
-                        <div class="block-list__content">
-                          <h3><a href="https://teamup.com/ksqjxw886jje5f3mpm/events/1198546821" target="_blank">Alumni
-                              Volunteer Information Session - Regional Alumni Chapters</a></h3><span class="date"> Jun
-                            29, 2022, 7 p.m.
-                            – 8 p.m.
-
-                          </span><span class="location">Virtual</span>
-                        </div>
-                      </article>
-                    </div>
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <article class="block-list-item event block-list-item--event">
-                        <div class="date-block date-block--horizontal"><span class="month">Jun</span><span
-                            class="day">30</span><span class="year">2022</span></div>
-                        <div class="block-list__content">
-                          <h3><a href="https://teamup.com/ksqjxw886jje5f3mpm/events/1205493941" target="_blank">Staten
-                              Island FerryHawks Vs. Long Island Ducks Baseball Game</a></h3><span class="date"> Jun 30,
-                            2022, 5:30 p.m.
-                            – 9:30 p.m.
-
-                          </span><span class="location">Staten Island University Hospital Community Park</span>
-                        </div>
-                      </article>
-                    </div>
-                  </div>
-                  <div class="btn-column"><a class="btn" href="about/events.html">View All Events</a></div>
-                </div>
-              </section>
-              <section class="section--global-spacing--small section--block-list sequence-anim-parent">
-                <div class="outer-row row">
-                  <div class="heading-column">
-                    <h2> News
-                    </h2>
-                  </div>
-                  <div class="row small-12 block-list-column mobile-offset-slider">
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <section class="block-list-item block-list-item--news">
-                        <div class="block-list__content">
-                          <h3><a
-                              href="about/news/2022-06-16/wred-tv-celebrates-five-decades-student-success.html"><span>WRED-TV
-                                Celebrates Five Decades of Student Success</span></a></h3><span class="date"><time
-                              datetime="2022-06-16T12:00:00Z">June 16, 2022</time></span>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <section class="block-list-item block-list-item--news">
-                        <div class="block-list__content">
-                          <h3><a
-                              href="about/news/2022-06-13/st-johns-faculty-member-receives-grant-research-possible-cure-brain-cancer.html"><span>St.
-                                John’s Faculty Member Receives Grant to Research Possible Cure for Brain
-                                Cancer</span></a></h3><span class="date"><time datetime="2022-06-13T12:00:00Z">June 13,
-                              2022</time></span>
-                        </div>
-                      </section>
-                    </div>
-                    <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
-                      <section class="block-list-item block-list-item--news">
-                        <div class="block-list__content">
-                          <h3><a
-                              href="about/news/2022-06-13/professor-molds-next-generation-business-leaders.html"><span>Professor
-                                Molds Next Generation of Business Leaders </span></a></h3><span class="date"><time
-                              datetime="2022-06-13T12:00:00Z">June 13, 2022</time></span>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                  <div class="btn-column"><a class="btn" href="about/news/all-news.html">View All News</a></div>
-                </div>
-              </section>
+   
               <section class="section--banded section--home-social-media">
                 <div class="row">
                   <div class="small-12 large-5 columns">

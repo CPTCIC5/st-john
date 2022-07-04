@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 {% block title %} Result {% endblock title %}
-
+{% block css %} <style>
+  .mo-res{
+      margin: 50px;
+  }
+  .btn-d{
+      margin-bottom: 20px;margin-top: 10px;
+  }
+  @media screen and (max-width:1024px) {
+      .mo-res{
+          margin-top: 240px;
+      }
+  }
+</style> {% endblock css %}
 {% block body %}
 
 {% load static %}
 
-           <div style="margin: 180px;margin-top: 140px;">
+           <div class="mo-res" >
             <center><h1>Result</h1></center>
            <form action="" method="post">
             {% csrf_token %}
@@ -14,14 +26,14 @@
                     <input type="text" name="enrollment_no" id="" placeholder="Search Enrollment No.">
                 </div>
                 <div>
-                    <input type="submit" class="btn-contact" value="Submit" style="background-color: #bd081d; color: white; cursor: pointer;padding: 10px;">
+                    <input type="submit" class="btn-contact" value="Submit" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
                 </div>
                 <br><br>
             </form>
             {% if semesters %}
                 <h3>Alumni Details</h3>
                 <div>
-                    <input type="submit" class="btn-contact" value="Print" style="background-color: #bd081d; color: white; cursor: pointer;width:20%;padding: 10px;"  onclick="myfunc('divthree')">
+                    <input type="submit" class="btn-contact" value="Print" style="background-color: darkblue; color: white; cursor: pointer;width:20%;padding: 10px;"  onclick="myfunc('divthree')">
                 </div>
 
                  <center style="margin: 20px;"> <div id="block-main-logo" class="site-header__logo"><a href="index.html"><span class="show-for-sr">Return
