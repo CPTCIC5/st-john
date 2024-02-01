@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Contact {% endblock title %}
+{% block css %} <style>
+    .mo-res{
+        margin: 50px;
+    }
+    .btn-d{
+        margin-bottom: 20px;margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        .mo-res{
+            margin-top: 240px;
+        }
+    }
+</style> {% endblock css %}
+{% block body %}
+
+{% load static %}
+
+           <div class="mo-res" >
+            <center><h1>Contact Us</h1></center>
+            <form method="POST">
+              {% csrf_token %}
+                <div class="inputs">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="" required style="margin-bottom: 20px;">
+                </div>
+                <div class="inputs">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="" required style="margin-bottom: 20px;">
+                </div>
+                <div class="inputs">
+                    <label for="contact_no">Contact No.</label>
+                    <input type="tel" name="contact_no" id="" required style="margin-bottom: 20px;">
+                </div>
+                <div class="inputs">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="" required style="margin-bottom: 20px;">
+                </div>
+                <div class="inputs">
+                    <label for="message">Your Message</label>
+                    <textarea rows="15" name="message" cols="20" required style="margin-bottom: 20px;"></textarea>
+                </div>
+                <div>
+                <input type="submit" class="btn-contact" value="Submit" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
+                </div>
+            </form>
+        </div>
+{% endblock body %}

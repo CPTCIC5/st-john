@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} Exams {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+
+<main class="main-content">
+    <div style="display: grid; grid-template-columns:1fr 1fr 1fr 1fr; margin-bottom: 50px;">
+        {% for obj in all_quizes %}
+        <div  style="margin:10px">
+            <div style="height:260px;">
+                <img src="{{obj.thumbnail.url}}" width="400" height="380"  alt="" style="object-fit:cover;">
+            </div>
+            <div>
+                <h4>{{obj.title}}</h4>
+                <p class="desc">{{obj.desc}}</p>
+            </div>
+            <a href="{% url 'index:quiz' obj.title %}" style="text-decoration: none;">
+                <button style="padding: 10px; background-color:#bd081d;border:0; color:white;width: 20%; border-radius: 6px;">Start</button>
+              </a>
+            </div>
+        {% endfor %}
+     
+    
+</div>
+</main>
+
+{% endblock body %}

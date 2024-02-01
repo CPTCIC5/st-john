@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %} Courses {% endblock title %}
+
+{% block body %}
+
+{% load static %}
+        <div class="hero-container hide-on-print">
+          <section role="article" about="/academics/programs"
+            class="hero hero--parallax hero--landing section--global-spacing hero--short">
+            <div class="main-slider">
+              <div class="item image">
+                <div aria-hidden="true" class="hero__overlay hero__overlay--inactive"></div>
+                <div class="slide-image slide-media">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="{% static 'images/program.jpg' %} 1x"
+                        media="(min-width: 1024px)" type="image/webp" />
+                      <source
+                        srcset="/program.jpg 1x"
+                        media="(min-width: 640px)" type="image/webp" />
+                      <source
+                        srcset="/program.jpg 1x"
+                        media="(min-width: 1024px)" type="image/jpeg" />
+                      <source
+                        srcset="/program.jpg 1x"
+                        media="(min-width: 640px)" type="image/jpeg" /><img
+                        src="/program.jpg"
+                        alt="St. Augustine Hall" typeof="foaf:Image" />
+                    </picture>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" class="hero__overlay"></div>
+            <div class="main-slider--content-wrapper">
+              <h1><span>Find a Program</span></h1>
+              <div class="main-slider--content">
+                <article class="hero__content"></article>
+              </div>
+              <nav class="hero-nav">
+                <div class="hero-nav__dots"></div>
+                <div class="hero-nav__controls"><button class="slick-pause"><span class="show-for-sr">click to pause
+                      slider</span></button><button aria-hidden="true" class="slick-play"><span
+                      class="show-for-sr">click to play slider</span></button></div>
+              </nav>
+              <div aria-hidden="true" class="hero__overlay--mobile"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="parallax-overlay">
+          <div class="system-region">
+            <div class="padded-row">
+              <div data-drupal-messages-fallback class="hidden"></div>
+            </div>
+          </div>
+          <div class="row ">
+            <div id="main-content" class="content">
+              <div class="views-element-container" id="block-views-block-program-listing-program-listing-block">
+                <div>
+                  <section class="section--program-finder section--global-spacing">
+                    <div
+                      class="view view-program-listing view-id-program_listing view-display-id-program_listing_block js-view-dom-id-b440a7cbd62fe5dd8d04de23183871386c37d02189f9d02f017218bccf93b480 full-width-listing listing--four-column-full">
+                      
+                      <div class="padded-row">
+                        <legend class="program-legend">
+                          <h4>Legend</h4>
+                          <ul>
+                            <li><strong>AuD</strong> Doctor of Audiology</li>
+                            <li><strong>BA</strong>Bachelor of Arts</li>
+                            <li><strong>BFA</strong> Bachelor of Fine Arts</li>
+                            <li><strong>BS</strong> Bachelor of Science</li>
+                            <li><strong>DPS</strong> Doctor of Professional Studies</li>
+                            <li><strong>EdD</strong> Doctor of Education</li>
+                            <li><strong>MA</strong> Master of Arts</li>
+                            <li><strong>MBA</strong> Master of Business Administration</li>
+                            <li><strong>MPS</strong> Master of Professional Studies</li>
+                            <li><strong>MS</strong> Master of Science</li>
+                            <li><strong>PHD</strong> Doctor of Philosophy</li>
+                            <li><strong>PSYD</strong> Doctor of Psychology</li>
+                          </ul>
+                        </legend>
+                      </div>
+                      <div class="view-content">
+                          <div class="padded-row letter-row">
+                          </div>
+                          <center style="padding: 30px;padding-bottom: 0;">
+                            <div style="margin-bottom: 10px;font-size: 22px;color:black;">
+                              <a href="/health_science_courses">Health Course</a>
+                            </div>
+
+                           <div style="margin-bottom: 10px;font-size: 22px;color:black;">
+                            <a href="/engineering_courses">Engineering Courses</a>
+                           </div>
+
+                           <div style="margin-bottom: 10px;font-size: 22px;color:black;">
+                            <a href="/management_courses">Management Courses</a>
+                           </div>
+                        
+                           <div style="margin-bottom: 10px;font-size: 22px;color:black;">
+                            <a href="/certified_courses">Certified Courses</a>
+                           </div>
+                         
+                        
+                         
+                           
+                        </center>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endblock body %}

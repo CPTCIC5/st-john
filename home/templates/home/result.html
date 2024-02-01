@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block title %} Result {% endblock title %}
+{% block css %} <style>
+  .mo-res{
+      margin: 50px;
+  }
+  .btn-d{
+      margin-bottom: 20px;margin-top: 10px;
+  }
+  @media screen and (max-width:1024px) {
+      .mo-res{
+          margin-top: 240px;
+      }
+  }
+</style> {% endblock css %}
+{% block body %}
+
+{% load static %}
+
+           <div class="mo-res" >
+            <center><h1>Result</h1></center>
+           <form action="" method="post">
+            {% csrf_token %}
+                <div class="inputs" style="margin-bottom:20px;">
+                    <label style="margin-bottom:20px;">Enrollment No.</label>
+                    <input type="text" name="enrollment_no" id="" placeholder="Search Enrollment No.">
+                </div>
+                <div>
+                    <input type="submit" class="btn-contact" value="Submit" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
+                </div>
+                <br><br>
+            </form>
+            {% if semesters %}
+                <h3>Alumni Details</h3>
+                <div>
+                    <input type="submit" class="btn-contact" value="Print" style="background-color: darkblue; color: white; cursor: pointer;width:20%;padding: 10px;"  onclick="myfunc('divthree')">
+                </div>
+
+                 <center style="margin: 20px;"> <div id="block-main-logo" class="site-header__logo"><a href="index.html"><span class="show-for-sr">Return
+                    to St. John University homepage</span><img class="medium-up"
+                    src="{% static 'logos/stjohn.png' %}" alt="St. John University Logo"><img
+                    class="small-only" src="{% static 'logos/stjohn.png' %}"
+                    alt="St. John University Logo"></a></div></center>  
+       <div style="display:  flex;" id="divthree">
+        <img src="{{profile.profile_pic.url}}" alt="" width="290" height="250">
+        <div style="margin:15px;">
+            <p> <b> Enrollment No:</b> {{profile.enrollment_no}}</p> 
+            <p> <b> Name : </b> {{profile.name}}</p> 
+            <p> <b> Father's Name : </b>  {{profile.father_name}} </p> 
+            <p> <b> Course :</b> {{profile.course}}</p> 
+            <p> <b> Specialization:</b> {{profile.specialization}}</p> 
+            <p> <b> Year :</b> {{profile.academic_year}}</p> 
+            <p> <b> Year of Passing :</b> {{profile.year_of_passing}}</p> 
+        </div>
+ 
+       </div>
+       <center style="margin-top: 60px;">
+       <table class="table table-bordered border-secondary " style="margin-top: 20px;">
+      <b> Statement of Marks </b>
+        <thead>
+            <tr>
+              <th scope="row">Particulars</th>
+              <th>Max</th>
+              <th>Min</th>
+              <th>Obtained</th>
+              <th>Remarks</th>
+            </tr>
+        </thead>
+  
+        {% for sem in semesters %}
+          <tr>
+            <th scope="col">{{sem.particular}}</th>
+            <td>{{sem.max_marks}}</td>
+            <td>{{sem.min_marks}}</td>
+            <td>{{sem.obtained}}</td>
+            <td>{{sem.remarks}}</td>
+          </tr>     
+        {% endfor %}
+
+        
+      <tbody>
+        <tr>
+          <th scope="col"></th>
+          <td>{{total_max_marks}}</td>
+          <td>{{total_min_marks}}</td>
+          <td>{{total_obtained_marks}}</td>
+          <td>{{student_percentage}}%</td>
+        </tr>
+    </tbody> 
+    <tbody>
+        <tr>
+          <th scope="col">  </th>
+          <td> </td>
+          <td> </td>
+          <td><b> GRADE: </b></td>
+          <td>{{grade}}</td>
+        </tr>
+      </tbody>
+</table>
+</div>
+
+
+    </table>
+</center> 
+        </div>
+        <script type="text/javascript">
+            function myfunc(divthree){
+                var backup = document.body.innerHTML;
+            //    var divtwo = document.getElementById(divtwo).innerHTML;
+                var divthree = document.getElementById(divthree).innerHTML;
+                // console.log(type(divone))
+                // document.body.innerHTML =  divone+divthree;
+                document.body.innerHTML = divthree;
+                window.print();
+                document.body.innerHTML = backup;
+            }
+          </script>
+{% endif %}
+{% endblock body %}

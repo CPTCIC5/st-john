@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{myvar.enrollment_no}}</title>
+    <style>
+    
+        body{
+            height: 1000px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .title{
+            background-color: darkblue;
+            color: #fff;
+            padding: 1em;
+            border-radius: 60px;
+        }
+        .photo{
+            width: 250px;
+            height: 250px;text-align: right;
+        }   
+
+       .row{ 
+            display: flex;
+            flex-direction: row;
+        }
+        p{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <center> 
+        <h1 style="background-color: darkblue;padding:10px; color:white; font-size:28px;">St. John INTERNATIONAL UNIVERSITY</h1>
+    
+        <div style="display: flex; flex-direction: row;">
+          <img src="{{myvar.image.path}}" alt="" style="height:300px;">
+            <div style="margin-top: 20px;">
+                <h1>Registration Number- {{myvar.reg_no}}</h1>
+                <h1>Name- {{myvar.name}}</h1>
+                <h1>Date- {{myvar.date}}</h1>
+                <h1>Time- {{myvar.time}}</h1>
+                <h1>GATE Paper- {{myvar.paper}}</h1>
+                <h1>Exam Center({{myvar.exam_centre}})</h1>
+            </div>
+            </div></center>
+        <hr><br>
+            <div>
+                <center><h1>Following are the Instructions:</h1></center>
+                <p style="font-size: 14px;">{{myvar.instruction}}</p>
+            </div>
+        </div>
+</body>
+</html>

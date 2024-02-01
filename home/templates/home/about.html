@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+{% block title %} About {% endblock title %}
+{% block body %}
+{% load static %}
+
+        <div class="hero-container">
+          <section role="article" about="/about"
+            class="hero--landing hero hero--parallax section--global-spacing hero--stat">
+            <div class="main-slider">
+              <div class="item  image">
+                <div aria-hidden="true" class="hero__overlay hero__overlay--inactive"></div>
+                <div class="slide-image slide-media">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
+                        media="(min-width: 1024px)" type="image/jpeg" />
+                      <source
+                        srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
+                        media="(min-width: 640px)"  type="image/jpeg"/>
+                      <source
+                        srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
+                        media="(min-width: 1024px)" type="image/jpeg" />
+                      <source
+                        srcset="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
+                        media="(min-width: 640px)" type="image/jpeg" /><img
+                        src="{% static 'images/DSC_0012_1600x9008b7e.jpg' %}"
+                        alt="Steeple ontop of St. Thomas More Church" typeof="foaf:Image" />
+                    </picture>
+                  </figure>
+                </div>
+              </div>
+              <div class="item  image">
+                <div aria-hidden="true" class="hero__overlay hero__overlay--inactive"></div>
+                <div class="slide-image slide-media">
+                  <figure>
+                    <picture>
+                      <source
+                        srcset="{% static 'images/stspring.jpg' %} "
+                        media="(min-width: 1024px)" type="image/jpeg" />
+                      <source
+                        srcset="{% static 'images/stspring.jpg' %} "
+                        media="(min-width: 640px)" type="image/jpeg" />
+                      <source
+                        srcset="{% static 'images/stspring.jpg' %} "
+                        media="(min-width: 1024px)" type="image/jpeg" />
+                      <source
+                        srcset="{% static 'images/stspring.jpg' %} "
+                        media="(min-width: 640px)" type="image/jpeg" /><img
+                        src="{% static 'images/stspring.jpg' %}"
+                        alt="Students talking and walking together on campus" typeof="foaf:Image" />
+                    </picture>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" class="hero__overlay"></div>
+            <div class="main-slider--content-wrapper">
+              <h1><span>About</span></h1>
+              <div class="main-slider--content">
+                <article class="hero__content">
+                  <div class="hero__content__inner">
+                    <p> Catholic, Vincentian, Metropolitan, Global, and on a Mission to Ensure Student Success
+                    </p><a href="about/faith-and-mission.html" class="btn">
+                      Faith &amp; Mission
+                    </a>
+                  </div>
+                </article>
+                <article class="hero__content">
+                  <div class="hero__content__inner">
+                    <p> #1 Catholic Institution in the Nation for Student-Mobility
+                    </p><a href="about/history-and-facts/points-pride-old.html" class="btn">
+                      Points of Pride
+                    </a>
+                  </div>
+                </article>
+              </div>
+              <nav class="hero-nav" aria-label="hero-nav">
+                <div class="hero-nav__controls"><button class="slick-pause"><span class="show-for-sr">click to pause
+                      slider</span></button><button aria-hidden="true" class="slick-play"><span
+                      class="show-for-sr">click to play slider</span></button></div>
+              </nav>
+              <div class="hero-nav__dots"></div>
+              <div aria-hidden="true" class="hero__overlay--mobile"></div>
+            </div>
+          </section>
+          <div class="hero-stat-container">
+            <div class="row">
+              <article class="stat paragraph paragraph--type--l1-landing-hero-statistic paragraph--view-mode--default">
+                <span class="stat__value"> 21,346
+                </span>
+                <p> full- and part-time students
+                </p>
+              </article>
+              <article class="stat paragraph paragraph--type--l1-landing-hero-statistic paragraph--view-mode--default">
+                <span class="stat__value"> 193,000+
+                </span>
+                <p> alumni network
+                </p>
+              </article>
+              <article class="stat paragraph paragraph--type--l1-landing-hero-statistic paragraph--view-mode--default">
+                <span class="stat__value"> 17
+                </span>
+                <p> Division I, NCAA sports teams
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="parallax-overlay">
+          <div class="content">
+            <section class="section--landing-intro">
+              <div class="padded-row row">
+                <div class="section--small__title-lockup">
+                  <div class="lined-title-container anim-item">
+                    <h2 class="jumpnav-excluded-heading"> Our Mission
+                    </h2>
+                  </div>
+                  <p>Founded in 1870, St. John’s is a Catholic and Vincentian university that prepares students for
+                    personal and professional success in today’s global society and to provide an opportunity to deliver a Lifelong Learning, Flexible learning process and achieve the Life Goals of the people irrespective of their age or qualification who otherwise could not attend colleges or Academies due to various compulsions. </p>
+                </div>
+                <article class="card card--landing-intro card--small card--notched">
+                  <div class="card__content">
+                    <div class="card__content__inner">
+                      <div class="card__text">
+                        <h3> Get Involved
+                        </h3><span class="line-link"><a href="admission/apply.html">Apply</a></span><span
+                          class="line-link"><a href="https://sju.quadweb.site/giving/support-st-john-s"
+                            rel="noopener">Make a Gift</a></span>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <div class="parallax-overlay clearfix">
+              <section
+                class="section--global-spacing section--hover-grid paragraph paragraph--type--l1-landing-topic-drivers paragraph--view-mode--default">
+                <div class="topic-driver-featured-img"><img
+                    src="{% static 'images/gate.jpg' %}"
+                    width="1600" height="270" alt="St. John&#039;s University Crest on top of gate" loading="lazy"
+                    typeof="foaf:Image" />
+                  <div class="img-overlay anim-item" aria-hidden="true"></div>
+                  <div class="padded-row row">
+                    <h2> We Are St. John’s
+                    </h2>
+                    <p> Confident, goal-driven, and ethical—these are qualities of the St. John’s University community also focus on engaging the mind with necessary skills and craftsmanship required to meet the higher degree of knowledge and excellence required in the professional world. 
+                    </p>
+                  </div>
+                </div>
+         
+              </section>
+              <section
+                class="section--global-spacing section-vertical-img-listing paragraph paragraph--type--vertical-listing paragraph--view-mode--l1-landing-page">
+                <div class="section--small__title-lockup" style="margin: 20px;">
+                  <div class="lined-title-container anim-item">
+                    <h2> Admission and Aid
+                    </h2>
+                  </div>
+                  <p> You will find your key to a bright future at St. John’s. With world-class academics, renowned professors, outstanding resources, and a long tradition of excellence and service, St. John’s
+                    prepares you to change the world for the better.Aid individuals with a commitment to help them excel in education. To nurture and promote human advancement and to make the university a preferred institute for young women and men who are aspiring for productive careers.
+                  </p>
+                </div>
+              
+               
+              </section>
+              <section
+                class="section--banded section--global-spacing section--story-feature paragraph paragraph--type--story-feature paragraph--view-mode--l1-landing-page">
+                <div class="section--small__title-lockup">
+                  <div class="lined-title-container anim-item">
+                    <h2 style="margin: 20px;"> Success At St. John&#039;s
+                    </h2>
+                  </div>
+                  <p></p>
+                </div>
+                <div class="row">
+                  <div class="small-12 large-6 columns">
+                    <article class="card card--story card--small card--notched">
+                      <div class="card__media"><a href="about/news/success-stories/george-e-blair-67edd.html">
+                          <div class="media media--blazy media--bundle--image media--image is-b-loading"><img
+                              alt="George E. Blair, ’67Ed.D." class="media__image media__element b-lazy"
+                              decoding="async" loading="lazy"
+                              data-src="{% static 'images/dsc_1817_1.jpg'%}"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%20560%20373&#039;%2F%3E"
+                              width="560" height="373" typeof="foaf:Image" /></div>
+                        </a></div>
+                      <div class="card__content">
+                        <div class="card__content__inner">
+                          <div class="card__text">
+                            <h3><a href="about/news/success-stories/george-e-blair-67edd.html"> Through Horsemanship,
+                                Alumnus Teaches Life Lessons to Inner City Youth
+                              </a></h3>
+                            <p> “You can’t give what you don’t have,” explained George E. Blair ’67Ed.D., “and St.
+                              John’s gave me things I was looking for that I never found anywhere else.”
+                            </p><span class="name"><span>George E. Blair ’67Ed.D.</span></span><span class="gradclass">
+                              The School of Education
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="small-12 large-6 columns">
+                    <article class="card card--story card--small card--notched">
+                      <div class="card__media"><a href="about/news/success-stories/kelly-almond-08p-11gp-16phd.html">
+                          <div class="media media--blazy media--bundle--image media--image is-b-loading"><img
+                              alt="Kelly Almond ’08P, ’11GP, ’16Ph.D." class="media__image media__element b-lazy"
+                              decoding="async" loading="lazy"
+                              data-src="{% static 'images/kelly_almond-abbate.jpg' %}"
+                              src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D&#039;http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg&#039;%20viewBox%3D&#039;0%200%20560%20373&#039;%2F%3E"
+                              width="560" height="373" typeof="foaf:Image" /></div>
+                        </a></div>
+                      <div class="card__content">
+                        <div class="card__content__inner">
+                          <div class="card__text">
+                            <h3><a href="about/news/success-stories/kelly-almond-08p-11gp-16phd.html"> Triple Alumna
+                                Found Her Passion at St. John’s
+                              </a></h3>
+                            <p> “When I visited campus for the first time, I knew this was where I was supposed to be.”
+                              That initial feeling, plus a strong desire to attend college in New York City, eventually
+                              led Kelly Almond ’08P, ’11GP, ’16Ph.D. to spend her entire academic career at St. John’s
+                              University.
+                            </p><span class="name"><span>Kelly Almond ’08P, ’11GP, ’16Ph.D. </span></span><span
+                              class="gradclass"> College of Pharmacy and Health Sciences
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </section>
+              <section
+                class="section--global-spacing--small section--block-list sequence-anim-parent paragraph paragraph--type--featured-news paragraph--view-mode--default">
+                <div class="row outer-row">
+                  <div class="heading-column">
+                    <h2> University News
+                    </h2>
+                  </div>
+                  <div class="small-12 block-list-column">
+                    <div class="views-element-container">
+                      <div class="js-view-dom-id-55c91dfe8b61a07089aae18e06a243b39341c7ba9299eb1a5584739d6be50003">
+                        <div class="row padded-row mobile-offset-slider">
+                          <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
+                            <section class="block-list-item block-list-item--news">
+                              <div class="block-list__content">
+                                <h3><a
+                                    href="about/news/2021-08-10/vincentian-mission-informs-public-health-professors-research.html"><span>Vincentian
+                                      Mission Informs Public Health Professor’s Research</span></a></h3><span
+                                  class="date"><time datetime="2021-08-10T12:00:00Z">August 10, 2021</time></span>
+                              </div>
+                            </section>
+                          </div>
+                          <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
+                            <section class="block-list-item block-list-item--news">
+                              <div class="block-list__content">
+                                <h3><a
+                                    href="about/news/2021-06-14/chemistry-major-makes-his-mark-published-author-science-journal.html"><span>Chemistry
+                                      Major Makes his Mark as Published Author in Science Journal</span></a></h3><span
+                                  class="date"><time datetime="2021-06-14T12:00:00Z">June 14, 2021</time></span>
+                              </div>
+                            </section>
+                          </div>
+                          <div class="small-12 large-4 columns sequence-anim-item sequence-anim-item fade-left-in">
+                            <section class="block-list-item block-list-item--news">
+                              <div class="block-list__content">
+                                <h3><a
+                                    href="about/news/2021-01-27/tobin-online-mba-program-recognized-us-news-world-report.html">
+                                    Tobin Online M.B.A. Program Recognized by <em>U.S. News &amp; World Report</em></a>
+                                </h3><span class="date"><time datetime="2021-01-27T12:00:00Z">January 27,
+                                    2021</time></span>
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btn-column"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+{% endblock body %}

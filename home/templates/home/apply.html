@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %} Apply {% endblock title %}
+{% block css %} <style>
+    .mo-res{
+        margin: 50px;
+    }
+    .btn-d{
+        margin-bottom: 20px;margin-top: 10px;
+    }
+    @media screen and (max-width:1024px) {
+        .mo-res{
+            margin-top: 240px;
+        }
+    }
+</style> {% endblock css %}
+{% block body %}
+
+{% load static %}
+
+        <div class="mo-res" >
+            <center><h1>Apply</h1></center>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="" placeholder="Your Name">
+            </div>
+
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="" placeholder="Your Email">
+            </div>
+
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="phone">Enter Your Phone No.</label>
+            <input type="tel" name="phone" id="" placeholder="Phone No.">
+            </div>
+
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="" placeholder="Subject">
+            </div>
+
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="applying_for">Select Courses</label>
+            <select name="course" id="">
+            <option value="0" selected disabled>Choose Your Courses</option>    
+            <option value="Health Science Courses" >Health Science Courses</option>
+            <option value="Engineering Courses" >Engineering Courses</option>
+            <option value="Management Courses" >Management Courses</option>
+            <option value="Certified Courses" >Certified Courses</option>
+            <option value="Other Courses" >Other Courses</option>
+            </select>
+            </div>
+
+            <div class="inputs" style="margin-bottom: 20px;">
+            <label for="query">Query</label>
+            <textarea name="query" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="btn-d"  style="">
+                <input type="submit" class="btn-contact" value="Apply" style="background-color: darkblue; color: white; cursor: pointer;padding: 10px;">
+            </div>
+        </form>
+        </div>
+{% endblock body %}
